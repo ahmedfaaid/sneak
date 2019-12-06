@@ -3,6 +3,7 @@ title: 'Third News Post'
 date: 2019-11-06 10:00
 author: 'Ahmed Faaid'
 path: '/news/third-news-post'
+featuredImage: ../../images/003-third-review-img.jpg
 ---
 
 # Third News Post
