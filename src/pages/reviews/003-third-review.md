@@ -3,6 +3,7 @@ title: 'Third Review Post'
 date: 2019-11-03 10:00
 author: 'Ahmed Faaid'
 path: '/reviews/third-review'
+featuredImage: ../../images/003-third-review-img.jpg
 ---
 
 # Third Review
