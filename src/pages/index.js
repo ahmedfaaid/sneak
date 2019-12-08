@@ -63,7 +63,7 @@ const IndexPage = ({ data }) => (
     </Layout>
 )
 
-export const indexReviewsQuery = graphql`
+export const indexQuery = graphql`
     query {
         reviews: allMarkdownRemark(
             filter: { fileAbsolutePath: { regex: "/(reviews)/.*\\\\.md$/" } }
