@@ -4,6 +4,10 @@ date: 2019-11-02 10:00
 author: 'Ahmed Faaid'
 path: '/reviews/second-review'
 featuredImage: ../../images/002-second-review-img.jpg
+tags:
+    - Yeezy
+    - Yeezy Boost
+    - Adidas
 ---
 
 # Second Review

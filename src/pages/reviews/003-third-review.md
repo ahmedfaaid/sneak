@@ -4,6 +4,10 @@ date: 2019-11-03 10:00
 author: 'Ahmed Faaid'
 path: '/reviews/third-review'
 featuredImage: ../../images/003-third-review-img.jpg
+tags:
+    - Jordan
+    - Jumpman
+    - Air Jordan
 ---
 
 # Third Review

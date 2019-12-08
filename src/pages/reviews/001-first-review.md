@@ -4,6 +4,10 @@ date: 2019-11-01 10:00
 author: 'Ahmed Faaid'
 path: '/reviews/first-review'
 featuredImage: ../../images/001-first-review-img.jpg
+tags:
+    - Nike
+    - Air Max
+    - Nike Air Max
 ---
 
 # First Review

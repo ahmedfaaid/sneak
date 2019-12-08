@@ -4,6 +4,10 @@ date: 2019-11-05 10:00
 author: 'Ahmed Faaid'
 path: '/news/second-news-post'
 featuredImage: ../../images/002-second-review-img.jpg
+tags:
+    - Under Armour
+    - Steph Curry
+    - Curry 7
 ---
 
 # Second News Post

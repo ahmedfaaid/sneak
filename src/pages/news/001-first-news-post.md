@@ -4,6 +4,10 @@ date: 2019-11-04 10:00
 author: 'Ahmed Faaid'
 path: '/news/first-news-post'
 featuredImage: ../../images/001-first-review-img.jpg
+tags:
+    - New Balance
+    - Hypoknit
+    - Fresh Foam Lazr
 ---
 
 # First News Post
