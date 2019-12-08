@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
                 ></script>
             </Helmet>
             <Header siteTitle={data.site.siteMetadata.title} />
-            <div className='container'>
+            <div className='container push-footer'>
                 <main>{children}</main>
             </div>
             <Footer />

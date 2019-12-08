@@ -1,10 +1,5 @@
 @tailwind base;
 
-html,
-body {
-    min-height: 100%;
-}
-
 @tailwind components;
 
 hr {
@@ -15,6 +10,10 @@ hr {
     height: 1px;
     background-color: #a0aec0;
     opacity: 0.5;
+}
+
+.push-footer {
+    min-height: calc(100vh - 153px);
 }
 
 @tailwind utilities;
