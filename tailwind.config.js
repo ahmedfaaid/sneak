@@ -13,7 +13,11 @@ module.exports = {
                 primary: '#59a5d8',
                 secondary: '#133c55',
                 light: '#91e5f6',
-                white: '#fff'
+                white: '#fff',
+                ig: '#c13584',
+                twitter: '#1da1f2',
+                facebook: '#3b5998',
+                youtube: '#ff0000'
             },
             fontFamily: {
                 heading: ['Open-Sans', 'sans-serif'],

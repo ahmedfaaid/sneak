@@ -10,6 +10,7 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
+import Footer from './Footer/Footer'
 import './layout.css'
 
 import favicon from '../images/favicon.ico'
@@ -29,17 +30,17 @@ const Layout = ({ children }) => {
     return (
         <>
             <Helmet>
-                <link rel="icon" href={favicon} />
+                <link rel='icon' href={favicon} />
+                <script
+                    src='https://kit.fontawesome.com/163b6190b4.js'
+                    crossorigin='anonymous'
+                ></script>
             </Helmet>
             <Header siteTitle={data.site.siteMetadata.title} />
-            <div className="container">
+            <div className='container'>
                 <main>{children}</main>
-                <footer>
-                    © {new Date().getFullYear()}, Built with
-                    {` `}
-                    <a href="https://www.gatsbyjs.org">Gatsby</a>
-                </footer>
             </div>
+            <Footer />
         </>
     )
 }
