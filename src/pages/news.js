@@ -53,6 +53,9 @@ export const newsQuery = graphql`
                             }
                         }
                     }
+                    fields {
+                        slug
+                    }
                 }
             }
         }
