@@ -22,7 +22,7 @@ const ReviewsPage = ({ data }) => (
                     <Review
                         key={node.id}
                         title={node.frontmatter.title}
-                        path={node.frontmatter.path}
+                        slug={node.fields.slug}
                         fluid={
                             node.frontmatter.featuredImage.childImageSharp.fluid
                         }
@@ -45,7 +45,6 @@ export const reviewsQuery = graphql`
                     id
                     frontmatter {
                         title
-                        path
                         featuredImage {
                             childImageSharp {
                                 fluid(maxWidth: 800) {
@@ -53,6 +52,9 @@ export const reviewsQuery = graphql`
                                 }
                             }
                         }
+                    }
+                    fields {
+                        slug
                     }
                 }
             }

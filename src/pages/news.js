@@ -22,7 +22,7 @@ const NewsPage = ({ data }) => (
                     <News
                         key={node.id}
                         title={node.frontmatter.title}
-                        path={node.frontmatter.path}
+                        slug={node.fields.slug}
                         fluid={
                             node.frontmatter.featuredImage.childImageSharp.fluid
                         }
@@ -45,7 +45,6 @@ export const newsQuery = graphql`
                     id
                     frontmatter {
                         title
-                        path
                         featuredImage {
                             childImageSharp {
                                 fluid(maxWidth: 800) {

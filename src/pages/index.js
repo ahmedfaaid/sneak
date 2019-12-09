@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => (
                     <Review
                         key={node.id}
                         title={node.frontmatter.title}
-                        path={node.frontmatter.path}
+                        slug={node.fields.slug}
                         fluid={
                             node.frontmatter.featuredImage.childImageSharp.fluid
                         }
@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => (
                     <News
                         key={node.id}
                         title={node.frontmatter.title}
-                        path={node.frontmatter.path}
+                        slug={node.fields.slug}
                         fluid={
                             node.frontmatter.featuredImage.childImageSharp.fluid
                         }
@@ -75,7 +75,6 @@ export const indexQuery = graphql`
                     id
                     frontmatter {
                         title
-                        path
                         featuredImage {
                             childImageSharp {
                                 fluid(maxWidth: 800) {
@@ -83,6 +82,9 @@ export const indexQuery = graphql`
                                 }
                             }
                         }
+                    }
+                    fields {
+                        slug
                     }
                 }
             }
@@ -97,7 +99,6 @@ export const indexQuery = graphql`
                     id
                     frontmatter {
                         title
-                        path
                         featuredImage {
                             childImageSharp {
                                 fluid(maxWidth: 800) {
@@ -105,6 +106,9 @@ export const indexQuery = graphql`
                                 }
                             }
                         }
+                    }
+                    fields {
+                        slug
                     }
                 }
             }
