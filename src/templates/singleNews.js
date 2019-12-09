@@ -35,7 +35,7 @@ const singleNews = ({ data }) => {
                             <i className='fas fa-tags mr-1'></i>Tags:
                         </span>
                         {news.tags.map(tag => (
-                            <Link to={`/tag/${slugify(tag)}`}>
+                            <Link to={`/tag/${slugify(tag)}`} key={tag}>
                                 <span className='inline-block bg-primary rounded-full px-3 py-1 text-sm font-semibold text-white mr-2'>
                                     {tag}
                                 </span>

@@ -14,13 +14,13 @@ const singleReview = ({ data }) => {
                 {review.title}
             </h1>
             <hr />
-            <div className='w-2/3 mx-auto mt-10 px-10'>
+            <div className='w-full sm:w-10/12 md:w-2/3 mx-auto mt-10 md:px-10'>
                 <Img fluid={review.featuredImage.childImageSharp.fluid} />
                 <div className='my-10'>
-                    <p className='mb-2 font-body text-base text-gray-500'>
+                    <p className='mb-2 font-body text-base text-gray-500 text-center md:text-left'>
                         {review.date}
                     </p>
-                    <h3 className='mb-3 font-body text-base text-white bg-primary inline-block p-1 rounded'>
+                    <h3 className='mb-3 font-body text-base text-white bg-primary inline-block p-1 rounded text-center md:text-left'>
                         {review.author}
                     </h3>
                     <hr />
@@ -35,7 +35,7 @@ const singleReview = ({ data }) => {
                             <i className='fas fa-tags mr-1'></i>Tags:
                         </span>
                         {review.tags.map(tag => (
-                            <Link to={`/tag/${slugify(tag)}`}>
+                            <Link to={`/tag/${slugify(tag)}`} key={tag}>
                                 <span className='inline-block bg-primary rounded-full px-3 py-1 text-sm font-semibold text-white mr-2'>
                                     {tag}
                                 </span>

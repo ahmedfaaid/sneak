@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 const Footer = () => {
     const year = new Date().getFullYear()
@@ -15,36 +14,44 @@ const Footer = () => {
                 <div>
                     <ul className='flex justify-center mt-3 md:mt-0'>
                         <li>
-                            <Link
-                                to='https://instagram.com'
+                            <a
+                                href='https://instagram.com'
+                                target='_blank'
+                                rel='noopener noreferrer'
                                 className='text-white hover:text-ig text-lg mx-3'
                             >
                                 <i className='fab fa-instagram'></i>
-                            </Link>
+                            </a>
                         </li>
                         <li>
-                            <Link
-                                to='https://twitter.com'
+                            <a
+                                href='https://twitter.com'
+                                target='_blank'
+                                rel='noopener noreferrer'
                                 className='text-white hover:text-twitter text-lg mx-3'
                             >
                                 <i className='fab fa-twitter'></i>
-                            </Link>
+                            </a>
                         </li>
                         <li>
-                            <Link
-                                to='https://facebook.com'
+                            <a
+                                href='https://facebook.com'
+                                target='_blank'
+                                rel='noopener noreferrer'
                                 className='text-white hover:text-facebook text-lg mx-3'
                             >
                                 <i className='fab fa-facebook-f'></i>
-                            </Link>
+                            </a>
                         </li>
                         <li>
-                            <Link
-                                to='https://youtube.com'
+                            <a
+                                href='https://youtube.com'
+                                target='_blank'
+                                rel='noopener noreferrer'
                                 className='text-white hover:text-youtube text-lg mx-3'
                             >
                                 <i className='fab fa-youtube'></i>
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                 </div>

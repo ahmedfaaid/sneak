@@ -51,10 +51,10 @@ const IndexPage = ({ data }) => (
                     />
                 ))}
             </div>
-            <div class='block text-center md:flex md:justify-end'>
+            <div className='block text-center md:flex md:justify-end'>
                 <Link
                     to='/news'
-                    class='text-primary hover:text-secondary text-lg block font-semibold font-body py-2 px-4'
+                    className='text-primary hover:text-secondary text-lg block font-semibold font-body py-2 px-4'
                 >
                     More News <span>&rarr;</span>
                 </Link>
