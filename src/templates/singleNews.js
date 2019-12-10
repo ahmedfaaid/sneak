@@ -14,7 +14,7 @@ const singleNews = ({ data }) => {
                 {news.title}
             </h1>
             <hr />
-            <div className='w-2/3 mx-auto mt-10 px-10'>
+            <div className='w-full md:w-2/3 mx-auto mt-10 px-4 md:px-10'>
                 <Img fluid={news.featuredImage.childImageSharp.fluid} />
                 <div className='my-10'>
                     <p className='mb-2 font-body text-base text-gray-500'>

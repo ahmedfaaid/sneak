@@ -14,7 +14,7 @@ const singleReview = ({ data }) => {
                 {review.title}
             </h1>
             <hr />
-            <div className='w-full sm:w-10/12 md:w-2/3 mx-auto mt-10 md:px-10'>
+            <div className='w-full md:w-2/3 mx-auto mt-10 md:px-10'>
                 <Img fluid={review.featuredImage.childImageSharp.fluid} />
                 <div className='my-10'>
                     <p className='mb-2 font-body text-base text-gray-500 text-center md:text-left'>
