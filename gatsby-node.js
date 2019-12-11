@@ -15,8 +15,7 @@ exports.onCreateNode = ({ node, actions }) => {
 
 exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions
-    const singleReview = path.resolve('src/templates/singleReview.js')
-    const singleNews = path.resolve('src/templates/singleNews.js')
+    const singlePost = path.resolve('src/templates/singlePost.js')
 
     return graphql(`
         {
@@ -37,24 +36,12 @@ exports.createPages = ({ actions, graphql }) => {
     `).then(res => {
         if (res.errors) return Promise.reject(res.errors)
 
-        const reviews = res.data.allMarkdownRemark.edges
-        const news = res.data.allMarkdownRemark.edges
+        const post = res.data.allMarkdownRemark.edges
 
-        reviews.forEach(({ node }) => {
+        post.forEach(({ node }) => {
             createPage({
                 path: node.fields.slug,
-                component: singleReview,
-                context: {
-                    // passing slug for template to get post
-                    slug: node.fields.slug
-                }
-            })
-        })
-
-        news.forEach(({node}) => {
-            createPage({
-                path: node.fields.slug,
-                component: singleNews,
+                component: singlePost,
                 context: {
                     // passing slug for template to get post
                     slug: node.fields.slug
