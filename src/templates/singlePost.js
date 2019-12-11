@@ -14,29 +14,29 @@ const singlePost = ({ data }) => {
                 {post.title}
             </h1>
             <hr />
-            <div className='w-full md:w-2/3 mx-auto mt-10 xs:px-5 md:px-10'>
+            <div className='w-full md:w-3/4 mx-auto mt-10 px-0 md:px-8'>
                 <Img fluid={post.featuredImage.childImageSharp.fluid} />
-                <div className='my-10'>
-                    <p className='mb-2 font-body text-base text-gray-500 text-center md:text-left'>
+                <div className='my-10 smMax:text-center'>
+                    <p className='mb-2 font-body text-base text-gray-500'>
                         {post.date}
                     </p>
-                    <h3 className='mb-3 font-body text-base text-white bg-primary inline-block p-1 rounded text-center md:text-left'>
+                    <h3 className='mb-3 font-body text-base text-white bg-primary inline-block p-1 rounded'>
                         {post.author}
                     </h3>
                     <hr />
                     <div
-                        className='mt-10 mb-6 font-body leading-loose'
+                        className='mt-10 mb-6 font-body leading-loose text-left'
                         dangerouslySetInnerHTML={{
                             __html: data.markdownRemark.html
                         }}
                     />
-                    <div className='px-6 py-4'>
+                    <div className='px-6 py-4 text-left'>
                         <span className='mr-3'>
                             <i className='fas fa-tags mr-1'></i>Tags:
                         </span>
                         {post.tags.map(tag => (
                             <Link to={`/tag/${slugify(tag)}`} key={tag}>
-                                <span className='inline-block bg-primary rounded-full px-3 py-1 text-sm font-semibold text-white mr-2'>
+                                <span className='inline-block bg-primary rounded-full px-1 sm:px-3 py-1 text-xs sm:text-sm font-semibold text-white mr-2'>
                                     {tag}
                                 </span>
                             </Link>
