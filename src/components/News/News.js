@@ -10,9 +10,11 @@ const News = ({ title, slug, fluid }) => {
                 <Img className='w-full md:w-10/12 mx-auto' fluid={fluid} />
             </Link>
             <div className='md:px-6 py-4'>
-                <h3 className='font-heading text-lg subpixel-antialiased mb-2'>
-                    {title}
-                </h3>
+                <Link to={slug}>
+                    <h3 className='font-heading text-lg subpixel-antialiased mb-2'>
+                        {title}
+                    </h3>
+                </Link>
             </div>
             <Link
                 className='text-primary hover:text-secondary hover:underline md:ml-6'
