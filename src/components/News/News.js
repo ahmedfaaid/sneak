@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
+import PropTypes from 'prop-types'
 
 const News = ({ title, slug, fluid }) => {
     return (
@@ -21,6 +22,12 @@ const News = ({ title, slug, fluid }) => {
             </Link>
         </div>
     )
+}
+
+News.propTypes = {
+    title: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    fluid: PropTypes.object.isRequired
 }
 
 export default News

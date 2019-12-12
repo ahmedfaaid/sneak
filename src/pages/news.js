@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 
 import News from '../components/News/News'
 
@@ -61,5 +62,9 @@ export const newsQuery = graphql`
         }
     }
 `
+
+NewsPage.propTypes = {
+    data: PropTypes.object.isRequired
+}
 
 export default NewsPage

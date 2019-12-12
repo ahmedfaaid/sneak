@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { graphql, Link } from 'gatsby'
+import PropTypes from 'prop-types'
 
 import Review from '../components/Reviews/Review'
 import News from '../components/News/News'
@@ -115,5 +116,9 @@ export const indexQuery = graphql`
         }
     }
 `
+
+IndexPage.propTypes = {
+    data: PropTypes.object.isRequired
+}
 
 export default IndexPage

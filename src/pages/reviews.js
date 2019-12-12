@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 
 import Review from '../components/Reviews/Review'
 
@@ -61,5 +62,9 @@ export const reviewsQuery = graphql`
         }
     }
 `
+
+ReviewsPage.propTypes = {
+    data: PropTypes.object.isRequired
+}
 
 export default ReviewsPage
