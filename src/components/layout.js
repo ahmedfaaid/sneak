@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import Footer from './Footer/Footer'
+import Sidebar from './Sidebar/Sidebar'
 import './layout.css'
 
 import favicon from '../images/favicon.ico'
@@ -37,8 +38,9 @@ const Layout = ({ children }) => {
                 ></script>
             </Helmet>
             <Header siteTitle={data.site.siteMetadata.title} />
-            <div className='container push-footer'>
-                <main>{children}</main>
+            <div className='container md:flex push-footer'>
+                <main className='md:w-4/5'>{children}</main>
+                <Sidebar />
             </div>
             <Footer />
         </>

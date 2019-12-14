@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 const Review = ({ title, slug, fluid }) => {
     return (
-        <div className='lg:max-w-xs overflow-hidden md:w-2/5 lg:w-1/3 mx-3 mb-3 shadow-md md:shadow-none'>
+        <div className='lg:max-w-xs xl:max-w-sm overflow-hidden md:w-2/5 lg:w-2/3 mx-3 mb-3 shadow-md md:shadow-none'>
             <Link to={slug}>
                 <Img className='w-full md:w-10/12 mx-auto' fluid={fluid} />
             </Link>
