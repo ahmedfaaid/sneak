@@ -27,6 +27,12 @@ module.exports = {
                 path: `${__dirname}/src/pages/news`
             }
         },
+        {
+            resolve: `gatsby-source-instagram`,
+            options: {
+                username: `sneakersseur`
+            }
+        },
         `gatsby-transformer-remark`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,

@@ -1,14 +1,44 @@
-// import React from 'react';
-// import { graphql } from 'gatsby'
+import React from 'react'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import PropTypes from 'prop-types'
 
-// const Instagram = () => (
-    
-// );
+const Instagram = ({ data }) => {
+    const ig = data.allInstaNode.edges
+    console.log(ig)
+    return (
+        <div>
+            {ig.map(({ node }) => (
+                <Img
+                    key={node.id}
+                    fixed={node.localFile.childImageSharp.fixed}
+                />
+            ))}
+        </div>
+    )
+}
 
-// const instagramQuery = graphql`
-//     query {
-        
-//     }
-// `
+export const instagramQuery = graphql`
+    query {
+        allInstaNode {
+            edges {
+                node {
+                    id
+                    localFile {
+                        childImageSharp {
+                            fixed(width: 150, height: 150) {
+                                ...GatsbyImageSharpFixed
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+`
 
-// export default Instagram;
+Instagram.propTypes = {
+    data: PropTypes.object
+}
+
+export default Instagram

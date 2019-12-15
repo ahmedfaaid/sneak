@@ -1,4 +1,5 @@
 import React from 'react';
+import Instagram from '../Instagram/Instagram'
 
 const Sidebar = () => (
     <aside className='md:h-screen md:sticky md:top-0 my-6 bg-gray-200'>
@@ -15,6 +16,7 @@ const Sidebar = () => (
                     <button type="submit" className='bg-primary hover:bg-secondary text-white font-semibold py-2 px-4 border border-primary hover:border-transparent rounded mt-4'>Subscribe</button>
                 </div>
             </form>
+            <Instagram />
         </div>
     </aside>
 );
