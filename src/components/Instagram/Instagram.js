@@ -1,44 +1,47 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import PropTypes from 'prop-types'
 
-const Instagram = ({ data }) => {
-    const ig = data.allInstaNode.edges
-    console.log(ig)
-    return (
-        <div>
-            {ig.map(({ node }) => (
-                <Img
-                    key={node.id}
-                    fixed={node.localFile.childImageSharp.fixed}
-                />
-            ))}
-        </div>
-    )
-}
+const Instagram = () => (
+    <div className='mt-6'>
+        <h2 className='font-heading text-xl text-center text-secondary subpixel-antialiased font-bold tracking-wide px-3 mb-3'>
+            Instagram Feed
+        </h2>
+        <StaticQuery
+            query={instagramQuery}
+            render={data => {
+                const igData = data.allInstaNode.edges
+                return igData.map(({ node }) => (
+                    <div>
+                        <Img fluid={node.localFile.childImageSharp.fluid} />
+                        <span className='font-heading text-md text-center text-secondary max-w-full'>
+                            {node.caption.substring(0, 20)}...
+                        </span>
+                    </div>
+                ))
+            }}
+        />
+    </div>
+)
 
-export const instagramQuery = graphql`
-    query {
+const instagramQuery = graphql`
+    query MyQuery {
         allInstaNode {
             edges {
                 node {
                     id
                     localFile {
                         childImageSharp {
-                            fixed(width: 150, height: 150) {
-                                ...GatsbyImageSharpFixed
+                            fluid(maxWidth: 250) {
+                                ...GatsbyImageSharpFluid
                             }
                         }
                     }
+                    caption
                 }
             }
         }
     }
 `
-
-Instagram.propTypes = {
-    data: PropTypes.object
-}
 
 export default Instagram
