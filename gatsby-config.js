@@ -1,3 +1,4 @@
+require('dotenv').config()
 module.exports = {
     siteMetadata: {
         title: `Sneakersseur`,
@@ -31,6 +32,12 @@ module.exports = {
             resolve: `gatsby-source-instagram`,
             options: {
                 username: `sneakersseur`
+            }
+        },
+        {
+            resolve: `gatsby-plugin-mailchimp`,
+            options: {
+                endpoint: process.env.MAILCHIMP_POST
             }
         },
         `gatsby-transformer-remark`,
