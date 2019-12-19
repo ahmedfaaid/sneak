@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import addToMailChimp from 'gatsby-plugin-mailchimp'
 
 const SubscribeForm = () => {
@@ -15,7 +15,7 @@ const SubscribeForm = () => {
     }
 
     const handleEmailChange = e => {
-        setEmail(event.currentTarget.value)
+        setEmail(e.currentTarget.value)
     }
 
     return (
