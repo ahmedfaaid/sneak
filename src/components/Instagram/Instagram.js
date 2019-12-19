@@ -12,7 +12,7 @@ const Instagram = () => (
             render={data => {
                 const igData = data.allInstaNode.edges
                 return igData.map(({ node }) => (
-                    <div>
+                    <div key={node.id}>
                         <Img fluid={node.localFile.childImageSharp.fluid} />
                         <span className='font-heading text-md text-center text-secondary max-w-full'>
                             {node.caption.substring(0, 20)}...
@@ -26,7 +26,7 @@ const Instagram = () => (
 
 const instagramQuery = graphql`
     query MyQuery {
-        allInstaNode {
+        allInstaNode(sort: {order: DESC, fields: timestamp}, limit: 4) {
             edges {
                 node {
                     id
