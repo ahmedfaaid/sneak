@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
 const Instagram = () => (
-    <div className='sm:hidden mt-6'>
+    <div className='hidden sm:block mt-6'>
         <h2 className='font-heading text-xl text-center text-secondary subpixel-antialiased font-bold tracking-wide px-3 mb-3'>
             Instagram Feed
         </h2>
