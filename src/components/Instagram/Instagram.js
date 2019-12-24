@@ -12,12 +12,16 @@ const Instagram = () => (
             render={data => {
                 const igData = data.allInstaNode.edges
                 return igData.map(({ node }) => (
-                    <div key={node.id} className='mb-4'>
-                        <Img fluid={node.localFile.childImageSharp.fluid} />
-                        <span className='font-heading text-md text-center text-secondary max-w-full pt-2'>
-                            {node.caption.substring(0, 20)}...
-                        </span>
-                    </div>
+                    <a
+                        href={`https://instagram.com/p/${node.id}`}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        key={node.id}
+                    >
+                        <div className='mb-4 border-transparent border hover:border-primary'>
+                            <Img fluid={node.localFile.childImageSharp.fluid} />
+                        </div>
+                    </a>
                 ))
             }}
         />
