@@ -32,7 +32,7 @@ const instagramQuery = graphql`
                     id
                     localFile {
                         childImageSharp {
-                            fluid(maxWidth: 200) {
+                            fluid(maxWidth: 350) {
                                 ...GatsbyImageSharpFluid
                             }
                         }
