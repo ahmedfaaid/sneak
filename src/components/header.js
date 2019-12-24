@@ -3,7 +3,7 @@ import React from 'react'
 import Navbar from './Navbar/Navbar'
 
 const Header = () => (
-    <header>
+    <header className='sticky top-0 z-10'>
         <Navbar />
     </header>
 )

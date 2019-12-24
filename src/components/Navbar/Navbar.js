@@ -12,7 +12,7 @@ const Navbar = () => {
         'border-b border-transparent md:hover:border-primary md:hover:text-primary text-md font-body font-light md:font-base md:p-3'
 
     return (
-        <nav className='bg-white py-6'>
+        <nav className='bg-gray-200 py-6'>
             <div className='block md:hidden ml-6'>
                 <button
                     onClick={toggleNav}
