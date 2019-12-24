@@ -6,40 +6,43 @@ import PropTypes from 'prop-types'
 
 import Review from '../components/Reviews/Review'
 
-const ReviewsPage = ({ data }) => (
-    <Layout>
-        <SEO title='Reviews' />
-        <div className='my-3'>
-            <h1 className='font-heading text-xl text-center md:text-left subpixel-antialiased font-bold tracking-wide mb-3 p-3'>
-                Sneaker Reviews
-            </h1>
-            <p className='font-body text-xl text-gray-700 text-center mb-10'>
-                See what we have to say. From the most popular to the rare gems
-                in the sneaker world
-            </p>
-            <hr />
-            {data.allMarkdownRemark.edges ? (
-                <div className='block md:flex mb-4 justify-between flex-wrap mt-10'>
-                    {data.allMarkdownRemark.edges.map(({ node }) => (
-                        <Review
-                            key={node.id}
-                            title={node.frontmatter.title}
-                            slug={node.fields.slug}
-                            fluid={
-                                node.frontmatter.featuredImage.childImageSharp
-                                    .fluid
-                            }
-                        />
-                    ))}
-                </div>
-            ) : (
-                <p className='font-body text-lg text-secondary'>
-                    Sorry. We have no reviews for you. Check back later.
+const ReviewsPage = ({ data }) => {
+    const hasReviews = data.allMarkdownRemark.edges
+    return (
+        <Layout>
+            <SEO title='Reviews' />
+            <div className='my-3'>
+                <h1 className='font-heading text-xl text-center md:text-left subpixel-antialiased font-bold tracking-wide mb-3 p-3'>
+                    Sneaker Reviews
+                </h1>
+                <p className='font-body text-xl text-gray-700 text-center mb-10'>
+                    See what we have to say. From the most popular to the rare
+                    gems in the sneaker world
                 </p>
-            )}
-        </div>
-    </Layout>
-)
+                <hr />
+                {hasReviews && hasReviews.length > 0 ? (
+                    <div className='block md:flex mb-4 justify-between flex-wrap mt-10'>
+                        {data.allMarkdownRemark.edges.map(({ node }) => (
+                            <Review
+                                key={node.id}
+                                title={node.frontmatter.title}
+                                slug={node.fields.slug}
+                                fluid={
+                                    node.frontmatter.featuredImage
+                                        .childImageSharp.fluid
+                                }
+                            />
+                        ))}
+                    </div>
+                ) : (
+                    <p className='font-body font-bold text-xl mt-6 p-3'>
+                        Sorry. We have no reviews for you. Check back later.
+                    </p>
+                )}
+            </div>
+        </Layout>
+    )
+}
 
 export const reviewsQuery = graphql`
     query {

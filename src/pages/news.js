@@ -6,7 +6,9 @@ import PropTypes from 'prop-types'
 
 import News from '../components/News/News'
 
-const NewsPage = ({ data }) => (
+const NewsPage = ({ data }) => {
+    const hasNews = data.allMarkdownRemark.edges
+    return (
     <Layout>
         <SEO title='News' />
         <div className='my-3'>
@@ -18,7 +20,7 @@ const NewsPage = ({ data }) => (
                 covered
             </p>
             <hr />
-            {data.allMarkdownRemark.edges ? (
+            {hasNews && hasNews.length > 0 ? (
                 <div className='block md:flex mb-4 justify-between flex-wrap mt-10'>
                     {data.allMarkdownRemark.edges.map(({ node }) => (
                         <News
@@ -39,7 +41,7 @@ const NewsPage = ({ data }) => (
             )}
         </div>
     </Layout>
-)
+)}
 
 export const newsQuery = graphql`
     query {
