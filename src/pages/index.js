@@ -8,9 +8,9 @@ import LatestNews from '../components/LatestNews/LatestNews'
 const IndexPage = ({ data }) => (
     <Layout>
         <SEO title='Home' />
-        <LatestReviews />
-        <hr />
         <LatestNews />
+        <hr />
+        <LatestReviews />
     </Layout>
 )
 
