@@ -10,7 +10,7 @@ const LatestReviews = () => (
             const hasReviews = data.allMarkdownRemark.edges
             return (
                 <>
-                    {hasReviews ? (
+                    {hasReviews && hasReviews.length > 0 ? (
                         <div className='my-3'>
                             <h2 className='font-heading text-xl text-center md:text-left subpixel-antialiased font-bold tracking-wide mb-3 p-3'>
                                 Latest Reviews

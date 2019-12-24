@@ -31,30 +31,38 @@ const Navbar = () => {
                 } container md:flex justify-between smMax:-ml-6 smMax:mt-2`}
             >
                 <ul>
-                    <li className='bg-primary'>
+                    <li className='bg-primary mx-4'>
                         <Link
                             to='/'
-                            className='text-white md:hover:bg-secondary text-xl font-body font-light md:font-base md:p-3 smMax:mb-4 rounded-lg'
+                            className='text-white md:hover:bg-secondary text-lg font-body font-light md:font-base md:p-3 smMax:mb-4 rounded-lg'
                         >
                             Home
                         </Link>
                     </li>
                 </ul>
                 <ul className='block md:flex'>
-                    <li className='bg-primary lg:mr-10'>
+                    <li className='bg-primary mx-4'>
+                        <Link
+                            to='/news'
+                            className='text-white md:hover:bg-secondary text-lg font-body font-light md:font-base md:p-3 smMax:mb-4 rounded-lg'
+                        >
+                            News
+                        </Link>
+                    </li>
+                    <li className='bg-primary mx-4'>
                         <Link
                             to='/reviews'
-                            className='text-white md:hover:bg-secondary text-xl font-body font-light md:font-base md:p-3 smMax:mb-4 rounded-lg'
+                            className='text-white md:hover:bg-secondary text-lg font-body font-light md:font-base md:p-3 smMax:mb-4 rounded-lg'
                         >
                             Reviews
                         </Link>
                     </li>
-                    <li className='bg-primary'>
+                    <li className='bg-primary mx-4'>
                         <Link
-                            to='/news'
-                            className='text-white md:hover:bg-secondary text-xl font-body font-light md:font-base md:p-3 smMax:mb-4 rounded-lg'
+                            to='/releses'
+                            className='text-white md:hover:bg-secondary text-lg font-body font-light md:font-base md:p-3 smMax:mb-4 rounded-lg'
                         >
-                            News
+                            Releases
                         </Link>
                     </li>
                 </ul>

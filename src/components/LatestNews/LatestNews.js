@@ -10,23 +10,25 @@ const LatestNews = () => (
             const hasNews = data.allMarkdownRemark.edges
             return (
                 <>
-                    {hasNews ? (
+                    {hasNews && hasNews.length > 0 ? (
                         <div className='my-3'>
                             <h2 className='font-heading text-xl text-center md:text-left subpixel-antialiased font-bold tracking-wide mb-3 p-3'>
                                 Latest News
                             </h2>
                             <div className='block md:flex mb-4 justify-between flex-wrap'>
-                                {data.allMarkdownRemark.edges.map(({ node }) => (
-                                    <News
-                                        key={node.id}
-                                        title={node.frontmatter.title}
-                                        slug={node.fields.slug}
-                                        fluid={
-                                            node.frontmatter.featuredImage
-                                                .childImageSharp.fluid
-                                        }
-                                    />
-                                ))}
+                                {data.allMarkdownRemark.edges.map(
+                                    ({ node }) => (
+                                        <News
+                                            key={node.id}
+                                            title={node.frontmatter.title}
+                                            slug={node.fields.slug}
+                                            fluid={
+                                                node.frontmatter.featuredImage
+                                                    .childImageSharp.fluid
+                                            }
+                                        />
+                                    )
+                                )}
                             </div>
                             <div className='block text-center md:flex md:justify-end'>
                                 <Link
