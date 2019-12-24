@@ -18,18 +18,25 @@ const NewsPage = ({ data }) => (
                 covered
             </p>
             <hr />
-            <div className='block md:flex mb-4 justify-between flex-wrap mt-10'>
-                {data.allMarkdownRemark.edges.map(({ node }) => (
-                    <News
-                        key={node.id}
-                        title={node.frontmatter.title}
-                        slug={node.fields.slug}
-                        fluid={
-                            node.frontmatter.featuredImage.childImageSharp.fluid
-                        }
-                    />
-                ))}
-            </div>
+            {data.allMarkdownRemark.edges ? (
+                <div className='block md:flex mb-4 justify-between flex-wrap mt-10'>
+                    {data.allMarkdownRemark.edges.map(({ node }) => (
+                        <News
+                            key={node.id}
+                            title={node.frontmatter.title}
+                            slug={node.fields.slug}
+                            fluid={
+                                node.frontmatter.featuredImage.childImageSharp
+                                    .fluid
+                            }
+                        />
+                    ))}
+                </div>
+            ) : (
+                <p className='font-body text-lg text-secondary'>
+                    Sorry. We have no news for you. Check back later.
+                </p>
+            )}
         </div>
     </Layout>
 )
