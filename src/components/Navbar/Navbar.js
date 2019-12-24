@@ -8,15 +8,18 @@ const Navbar = () => {
         setNavOpen(!navOpen)
     }
 
+    const linkClasses =
+        'border-b border-transparent md:hover:border-primary md:hover:text-primary text-md font-body font-light md:font-base md:p-3'
+
     return (
-        <nav className='bg-primary py-6'>
+        <nav className='bg-white py-6'>
             <div className='block md:hidden ml-6'>
                 <button
                     onClick={toggleNav}
-                    className='menu-btn flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-secondary'
+                    className='menu-btn flex items-center px-3 py-2 border-white'
                 >
                     <svg
-                        className='fill-current h-3 w-3'
+                        className='fill-current h-4 w-4'
                         viewBox='0 0 20 20'
                         xmlns='http://www.w3.org/2000/svg'
                     >
@@ -31,37 +34,25 @@ const Navbar = () => {
                 } container md:flex justify-between smMax:-ml-6 smMax:mt-2`}
             >
                 <ul>
-                    <li className='bg-primary mx-4'>
-                        <Link
-                            to='/'
-                            className='text-white md:hover:bg-secondary text-lg font-body font-light md:font-base md:p-3 smMax:mb-4 rounded-lg'
-                        >
+                    <li className='mx-4 smMax:mb-3'>
+                        <Link to='/' className={linkClasses}>
                             Home
                         </Link>
                     </li>
                 </ul>
                 <ul className='block md:flex'>
-                    <li className='bg-primary mx-4'>
-                        <Link
-                            to='/news'
-                            className='text-white md:hover:bg-secondary text-lg font-body font-light md:font-base md:p-3 smMax:mb-4 rounded-lg'
-                        >
+                    <li className='mx-4 smMax:mb-3'>
+                        <Link to='/news' className={linkClasses}>
                             News
                         </Link>
                     </li>
-                    <li className='bg-primary mx-4'>
-                        <Link
-                            to='/reviews'
-                            className='text-white md:hover:bg-secondary text-lg font-body font-light md:font-base md:p-3 smMax:mb-4 rounded-lg'
-                        >
+                    <li className='mx-4 smMax:mb-3'>
+                        <Link to='/reviews' className={linkClasses}>
                             Reviews
                         </Link>
                     </li>
-                    <li className='bg-primary mx-4'>
-                        <Link
-                            to='/releses'
-                            className='text-white md:hover:bg-secondary text-lg font-body font-light md:font-base md:p-3 smMax:mb-4 rounded-lg'
-                        >
+                    <li className='mx-4 smMax:mb-3'>
+                        <Link to='/releses' className={linkClasses}>
                             Releases
                         </Link>
                     </li>
