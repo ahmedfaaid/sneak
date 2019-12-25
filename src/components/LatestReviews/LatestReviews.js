@@ -7,10 +7,11 @@ const LatestReviews = () => (
     <StaticQuery
         query={latestReviewQuery}
         render={data => {
-            const hasReviews = data.allMarkdownRemark.edges
+            const hasReviews = data.allMarkdownRemark.edges && data.allMarkdownRemark.edges.length
+            
             return (
                 <>
-                    {hasReviews && hasReviews.length > 0 ? (
+                    {hasReviews ? (
                         <div className='my-3'>
                             <h2 className='font-heading text-xl text-center md:text-left subpixel-antialiased font-bold tracking-wide mb-3 p-3'>
                                 Latest Reviews

@@ -7,10 +7,10 @@ const LatestNews = () => (
     <StaticQuery
         query={latestNewsQuery}
         render={data => {
-            const hasNews = data.allMarkdownRemark.edges
+            const hasNews = data.allMarkdownRemark.edges && data.allMarkdownRemark.edges.length
             return (
                 <>
-                    {hasNews && hasNews.length > 0 ? (
+                    {hasNews ? (
                         <div className='my-3'>
                             <h2 className='font-heading text-xl text-center md:text-left subpixel-antialiased font-bold tracking-wide mb-3 p-3'>
                                 Latest News
