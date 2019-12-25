@@ -34,24 +34,24 @@ const Navbar = () => {
                 } container md:flex justify-between smMax:-ml-6 smMax:mt-2`}
             >
                 <ul>
-                    <li className='mx-4 smMax:mb-3'>
+                    <li className='smMax:mb-3'>
                         <Link to='/' className={linkClasses}>
                             Home
                         </Link>
                     </li>
                 </ul>
                 <ul className='block md:flex'>
-                    <li className='mx-4 smMax:mb-3'>
+                    <li className='mr-4 smMax:mb-3'>
                         <Link to='/news' className={linkClasses}>
                             News
                         </Link>
                     </li>
-                    <li className='mx-4 smMax:mb-3'>
+                    <li className='mr-4 smMax:mb-3'>
                         <Link to='/reviews' className={linkClasses}>
                             Reviews
                         </Link>
                     </li>
-                    <li className='mx-4 smMax:mb-3'>
+                    <li className='smMax:mb-3'>
                         <Link to='/releses' className={linkClasses}>
                             Releases
                         </Link>

@@ -3,6 +3,7 @@ title: 'Third News Post'
 date: 2019-11-06 10:00
 author: 'Ahmed Faaid'
 featuredImage: ../../images/003-third-review-img.jpg
+feature: true
 tags:
     - Nike
     - Lebron James
