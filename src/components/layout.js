@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
             </Helmet>
             <Header siteTitle={data.site.siteMetadata.title} />
             <div className='container md:flex push-footer'>
-                <main className='md:w-4/5'>{children}</main>
+                <main className='md:w-4/5 mx-auto mr-4'>{children}</main>
                 <Sidebar />
             </div>
             <Footer />

@@ -13,11 +13,14 @@ const HeroFeature = () => (
             console.log(heroImage)
 
             return (
-                <div className='w-4/5 mx-auto mt-6'>
-                    <Carousel showThumbs={false}>
+                <div className='w-full mx-auto mt-6'>
+                    <Carousel showThumbs={false} showStatus={false}>
                         {heroImage.map(({ node }) => (
                             <Link to={node.fields.slug}>
-                                <div key={node.id} className='relative'>
+                                <div
+                                    key={node.id}
+                                    className='relative border-b-8 border-light'
+                                >
                                     <div
                                         className='absolute top-0 left-0 bg-black w-full h-full opacity-25'
                                         style={{ zIndex: 1 }}
@@ -29,7 +32,7 @@ const HeroFeature = () => (
                                         }
                                     />
                                     <h3
-                                        className='hero-text font-heading font-bold text-2xl subpixel-antialiased mb-2 text-white tracking-wide'
+                                        className='hero-text font-heading font-bold text-2xl subpixel-antialiased mb-2 text-white tracking-wide border-b-2 border-transparent hover:border-primary'
                                         style={{ zIndex: 2 }}
                                     >
                                         {node.frontmatter.title}
