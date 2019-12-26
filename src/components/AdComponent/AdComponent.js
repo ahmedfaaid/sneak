@@ -1,20 +1,8 @@
-import React from 'react';
+import React from 'react'
+import './AdComponent.css'
 
 const AdComponent = () => {
-    const styles = {
-        width: '300px',
-        height: '250px',
-        background: '#91e5f6',
-        color: '#fff',
-        lineHeight: '250px',
-        textAlign: 'center' 
-    }
+    return <div className='ad-component'>AD SPACE</div>
+}
 
-    return (
-        <div style={styles}>
-            AD SPACE
-        </div>
-    )
-};
-
-export default AdComponent;
+export default AdComponent

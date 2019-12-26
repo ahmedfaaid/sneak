@@ -3,3 +3,11 @@
     left: 40px;
     bottom: 15%;
 }
+
+@media (min-width: 768px) {
+    .hero-text {
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

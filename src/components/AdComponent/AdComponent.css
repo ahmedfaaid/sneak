@@ -1,0 +1,14 @@
+.ad-component {
+    width: 300px;
+    height: 250px;
+    background: #91e5f6;
+    color: #fff;
+    line-height: 250px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .ad-component {
+        width: 100%;
+    }
+}
