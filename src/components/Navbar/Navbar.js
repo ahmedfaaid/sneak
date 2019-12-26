@@ -52,7 +52,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className='smMax:mb-3'>
-                        <Link to='/releses' className={linkClasses}>
+                        <Link to='/releases' className={linkClasses}>
                             Releases
                         </Link>
                     </li>
