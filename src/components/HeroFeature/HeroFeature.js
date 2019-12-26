@@ -32,7 +32,7 @@ const HeroFeature = () => (
                                         }
                                     />
                                     <h3
-                                        className='hero-text font-heading font-bold text-2xl subpixel-antialiased mb-2 text-white tracking-wide border-b-2 border-transparent hover:border-primary'
+                                        className='hero-text font-heading font-bold text-xl lg:text-2xl text-center subpixel-antialiased mb-2 text-white tracking-wide border-b-2 border-transparent hover:border-primary'
                                         style={{ zIndex: 2 }}
                                     >
                                         {node.frontmatter.title}
