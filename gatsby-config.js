@@ -14,13 +14,13 @@ module.exports = {
                 path: `${__dirname}/src/images`
             }
         },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `reviews`,
-                path: `${__dirname}/src/pages/reviews`
-            }
-        },
+        // {
+        //     resolve: `gatsby-source-filesystem`,
+        //     options: {
+        //         name: `reviews`,
+        //         path: `${__dirname}/src/pages/reviews`
+        //     }
+        // },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
