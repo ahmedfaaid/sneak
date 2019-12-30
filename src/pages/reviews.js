@@ -23,15 +23,19 @@ const ReviewsPage = ({ data }) => {
                 {hasReviews && hasReviews.length > 0 ? (
                     <div className='block md:flex mb-4 justify-between flex-wrap mt-10'>
                         {data.allMarkdownRemark.edges.map(({ node }) => (
-                            <Review
-                                key={node.id}
-                                title={node.frontmatter.title}
-                                slug={node.fields.slug}
-                                fluid={
-                                    node.frontmatter.featuredImage
-                                        .childImageSharp.fluid
-                                }
-                            />
+                            <>
+                                {node.frontmatter.publish ? (
+                                    <Review
+                                        key={node.id}
+                                        title={node.frontmatter.title}
+                                        slug={node.fields.slug}
+                                        fluid={
+                                            node.frontmatter.featuredImage
+                                                .childImageSharp.fluid
+                                        }
+                                    />
+                                ) : null}
+                            </>
                         ))}
                     </div>
                 ) : (
@@ -63,6 +67,7 @@ export const reviewsQuery = graphql`
                                 }
                             }
                         }
+                        publish
                     }
                     fields {
                         slug

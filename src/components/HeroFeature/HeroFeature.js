@@ -14,33 +14,38 @@ const HeroFeature = () => (
 
             return (
                 <div className='w-full mx-auto mt-6'>
-                    <Carousel showThumbs={false} showStatus={false}>
-                        {heroImage.map(({ node }) => (
-                            <Link to={node.fields.slug}>
-                                <div
-                                    key={node.id}
-                                    className='relative border-b-8 border-light'
-                                >
-                                    <div
-                                        className='absolute top-0 left-0 bg-black w-full h-full opacity-25'
-                                        style={{ zIndex: 1 }}
-                                    />
-                                    <Img
-                                        fluid={
-                                            node.frontmatter.featuredImage
-                                                .childImageSharp.fluid
-                                        }
-                                    />
-                                    <h3
-                                        className='hero-text font-heading font-bold text-xl lg:text-2xl text-center subpixel-antialiased mb-2 text-white tracking-wide border-b-2 border-transparent hover:border-primary'
-                                        style={{ zIndex: 2 }}
-                                    >
-                                        {node.frontmatter.title}
-                                    </h3>
-                                </div>
-                            </Link>
-                        ))}
-                    </Carousel>
+                    {heroImage.map(({ node }) => (
+                        <>
+                            {node.frontmatter.publish ? (
+                                <Carousel showThumbs={false} showStatus={false}>
+                                    <Link to={node.fields.slug}>
+                                        <div
+                                            key={node.id}
+                                            className='relative border-b-8 border-light'
+                                        >
+                                            <div
+                                                className='absolute top-0 left-0 bg-black w-full h-full opacity-25'
+                                                style={{ zIndex: 1 }}
+                                            />
+                                            <Img
+                                                fluid={
+                                                    node.frontmatter
+                                                        .featuredImage
+                                                        .childImageSharp.fluid
+                                                }
+                                            />
+                                            <h3
+                                                className='hero-text font-heading font-bold text-xl lg:text-2xl text-center subpixel-antialiased mb-2 text-white tracking-wide border-b-2 border-transparent hover:border-primary'
+                                                style={{ zIndex: 2 }}
+                                            >
+                                                {node.frontmatter.title}
+                                            </h3>
+                                        </div>
+                                    </Link>
+                                </Carousel>
+                            ) : null}
+                        </>
+                    ))}
                 </div>
             )
         }}
@@ -67,6 +72,7 @@ export const heroFeatureQuery = graphql`
                                 }
                             }
                         }
+                        publish
                     }
                     fields {
                         slug

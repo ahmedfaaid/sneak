@@ -8,6 +8,7 @@ tags:
     - Lebron 17
     - More Than An Athlete
     - Nike
+publish: true
 ---
 
 On December 25th, Nike and Lebron will release the Uninterrupted x Lebron 17 "More Than An Athlete" sneaker. The MTAA sneaker comes in a blue and white colorway and a number of tongue guards with the "More Than An Athlete" slogan embroidered on it along with Lebron's and the Uninterrupted logos.

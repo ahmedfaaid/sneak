@@ -7,7 +7,9 @@ const LatestNews = () => (
     <StaticQuery
         query={latestNewsQuery}
         render={data => {
-            const hasNews = data.allMarkdownRemark.edges && data.allMarkdownRemark.edges.length
+            const hasNews =
+                data.allMarkdownRemark.edges &&
+                data.allMarkdownRemark.edges.length
             return (
                 <>
                     {hasNews ? (
@@ -18,15 +20,23 @@ const LatestNews = () => (
                             <div className='block md:flex mb-4 justify-between flex-wrap'>
                                 {data.allMarkdownRemark.edges.map(
                                     ({ node }) => (
-                                        <News
-                                            key={node.id}
-                                            title={node.frontmatter.title}
-                                            slug={node.fields.slug}
-                                            fluid={
-                                                node.frontmatter.featuredImage
-                                                    .childImageSharp.fluid
-                                            }
-                                        />
+                                        <>
+                                            {node.frontmatter.publish ? (
+                                                <News
+                                                    key={node.id}
+                                                    title={
+                                                        node.frontmatter.title
+                                                    }
+                                                    slug={node.fields.slug}
+                                                    fluid={
+                                                        node.frontmatter
+                                                            .featuredImage
+                                                            .childImageSharp
+                                                            .fluid
+                                                    }
+                                                />
+                                            ) : null}
+                                        </>
                                     )
                                 )}
                             </div>
@@ -65,6 +75,7 @@ export const latestNewsQuery = graphql`
                                 }
                             }
                         }
+                        publish
                     }
                     fields {
                         slug
