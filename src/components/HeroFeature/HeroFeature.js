@@ -14,7 +14,15 @@ const HeroFeature = () => (
 
             return (
                 <div className='w-full mx-auto mt-6'>
-                    <Carousel showThumbs={false} showStatus={false}>
+                    <Carousel
+                        showThumbs={false}
+                        showStatus={false}
+                        autoPlay={true}
+                        infiniteLoop={true}
+                        stopOnHover={false}
+                        interval={4000}
+                        transitionTime={400}
+                    >
                         {heroImage.map(({ node }) => (
                             <>
                                 {node.frontmatter.publish ? (
