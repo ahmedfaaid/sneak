@@ -1,0 +1,9 @@
+.news-link a {
+    text-decoration: none;
+    color: #59a5d8;
+}
+
+.news-link a:hover {
+    color: #133c55;
+    text-decoration: underline;
+}

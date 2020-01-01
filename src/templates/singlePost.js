@@ -4,6 +4,7 @@ import SEO from '../components/seo'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { slugify } from '../util/utilityFunctions'
+import './singlePost.css'
 
 const singlePost = ({ data }) => {
     const post = data.markdownRemark.frontmatter
@@ -25,7 +26,7 @@ const singlePost = ({ data }) => {
                     </h3>
                     <hr />
                     <div
-                        className='mt-10 mb-6 font-body leading-loose text-left'
+                        className='news-link mt-10 mb-6 font-body leading-loose text-left'
                         dangerouslySetInnerHTML={{
                             __html: data.markdownRemark.html
                         }}
