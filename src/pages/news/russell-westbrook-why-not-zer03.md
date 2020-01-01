@@ -2,7 +2,7 @@
 title: 'Russell Westbrook Why Not? Zer0.3'
 date: 2019-12-31 19:00
 author: 'Ahmed Faaid'
-featuredImage: ../../images/LebronMTAA/LBJ17MTAA_1.jpg
+featuredImage: ../../images/russell-westbrook-why-not-zer0-3/WhyNotZero3_ZeroNoise.jpg
 feature: true
 tags:
     - Russell Westbrook
@@ -13,9 +13,15 @@ publish: true
 
 With a reputation for being a confident, dynamic and explosive athlete, Russell Westbrook is also looking to inspire younger people with the release of his latest sneaker "**The Why Not? Zer0.3**".
 
+&nbsp;
+
 > I don’t take it for granted that I have my own shoe with the Jordan Brand, and I’m extremely excited about this one. Not only does it have a balance of great technology and style, but it represents more than just me. It represents hope and inspiration, and aims to instill belief in the youth. \- Russell Westbrook
 
-The **The Why Not? Zer0.3** comes in three colorways all with separate release dates. The Zer0 Noise(January 2), Heartbeat(January 9) and The Family(February 27) would be available at <a href="jordan.com" target="_blank">jordan.com</a> and select retailers.  It also launches with an apparel collection which will be available at <a href="jordan.com" target="_blank">jordan.com</a> and Footlocker House of Hoops.
+&nbsp;
+
+The **The Why Not? Zer0.3** comes in three colorways all with separate release dates. The Zer0 Noise(January 2), Heartbeat(January 9) and The Family(February 27) would be available at <a href="jordan.com" target="_blank">jordan.com</a> and select retailers. It also launches with an apparel collection which will be available at <a href="jordan.com" target="_blank">jordan.com</a> and Footlocker House of Hoops.
+
+&nbsp;
 
 ![Why Not? Zer0.3](https://lh3.googleusercontent.com/4u8e9U0Hasw7hrvUnF2VGWQ0Kh8IHxb8GNsi75Pzad_u7n0C8CXPcFWskeP6simXsBhA34puGSumPNo8egpHkgeSgfzp0U9LO5DEVaYSWX1UefCAb2W6rulc54QgvJrXUAx9zNq25g=w959-h540-no)
 
