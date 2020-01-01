@@ -14,10 +14,10 @@ const HeroFeature = () => (
 
             return (
                 <div className='w-full mx-auto mt-6'>
-                    {heroImage.map(({ node }) => (
-                        <>
-                            {node.frontmatter.publish ? (
-                                <Carousel showThumbs={false} showStatus={false}>
+                    <Carousel showThumbs={false} showStatus={false}>
+                        {heroImage.map(({ node }) => (
+                            <>
+                                {node.frontmatter.publish ? (
                                     <Link to={node.fields.slug}>
                                         <div
                                             key={node.id}
@@ -42,10 +42,10 @@ const HeroFeature = () => (
                                             </h3>
                                         </div>
                                     </Link>
-                                </Carousel>
-                            ) : null}
-                        </>
-                    ))}
+                                ) : null}
+                            </>
+                        ))}
+                    </Carousel>
                 </div>
             )
         }}
@@ -56,9 +56,10 @@ export const heroFeatureQuery = graphql`
     query {
         allMarkdownRemark(
             filter: {
-                frontmatter: { feature: { eq: true } }
+                frontmatter: { feature: { eq: true }, publish: { eq: true } }
                 fileAbsolutePath: { regex: "/(news|reviews)/.*\\\\.md$/" }
             }
+            sort: { fields: frontmatter___date, order: DESC }
         ) {
             edges {
                 node {
