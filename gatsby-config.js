@@ -3,7 +3,13 @@ module.exports = {
     siteMetadata: {
         title: `Sneakersseur`,
         description: `Read all the latest sneaker news and reviews.`,
-        author: `Ahmed Alhassan`
+        author: `Ahmed Alhassan`,
+        siteUrl: `https://sneakersseur.netlify.com`,
+        image: `./src/images/sneakersseur-logo.png`,
+        siteLanguage: `en-CA`,
+        siteLocale: `en-ca`,
+        twitter: `@sneakersseur`,
+        instagram: `@sneakersseur`
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
