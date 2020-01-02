@@ -2,7 +2,7 @@ require('dotenv').config()
 module.exports = {
     siteMetadata: {
         title: `Sneakersseur`,
-        description: `Read all the latest sneaker news and reviews.`,
+        description: `Sneakersseur brings you all the latest sneaker news, reviews and release dates.`,
         author: `Ahmed Alhassan`,
         siteUrl: `https://sneakersseur.netlify.com`,
         image: `./src/images/sneakersseur-logo.png`,
