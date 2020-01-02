@@ -15,7 +15,7 @@ const Footer = () => {
                     <ul className='flex justify-center mt-3 md:mt-0'>
                         <li>
                             <a
-                                href='https://instagram.com'
+                                href='https://instagram.com/sneakersseur'
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='text-white hover:text-ig text-lg mx-3'
@@ -25,7 +25,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <a
-                                href='https://twitter.com'
+                                href='https://twitter.com/sneakersseur'
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='text-white hover:text-twitter text-lg mx-3'
@@ -35,7 +35,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <a
-                                href='https://facebook.com'
+                                href='#'
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='text-white hover:text-facebook text-lg mx-3'
@@ -45,7 +45,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <a
-                                href='https://youtube.com'
+                                href='#'
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='text-white hover:text-youtube text-lg mx-3'
