@@ -10,7 +10,7 @@ const ReviewsPage = ({ data }) => {
     const hasReviews = data.allMarkdownRemark.edges
     return (
         <Layout>
-            <SEO title='Reviews' />
+            <SEO title='Reviews' description='Find out what we think about the latest sneakers. From Jordans to Yeezys we have an opinion.' />
             <div className='my-3'>
                 <h1 className='font-heading text-xl text-center md:text-left subpixel-antialiased font-bold tracking-wide mb-3 p-3'>
                     Sneaker Reviews

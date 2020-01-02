@@ -10,7 +10,10 @@ const NewsPage = ({ data }) => {
     const hasNews = data.allMarkdownRemark.edges
     return (
         <Layout>
-            <SEO title='News' />
+            <SEO
+                title='News'
+                description="Find out the latest in sneaker news at Sneakersseur. From the latest Lebrons to Jordans to Yeezys. We'll bring you the latest scoop."
+            />
             <div className='my-3'>
                 <h1 className='font-heading text-xl text-center md:text-left subpixel-antialiased font-bold tracking-wide mb-3 p-3'>
                     Sneaker News

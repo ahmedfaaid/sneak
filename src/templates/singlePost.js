@@ -10,7 +10,7 @@ const singlePost = ({ data }) => {
     const post = data.markdownRemark.frontmatter
     return (
         <Layout>
-            <SEO title={post.title} />
+            <SEO title={post.title} image={post.featuredImage.childImageSharp.src} />
             <h1 className='font-heading text-3xl text-center subpixel-antialiased font-bold tracking-wide my-3 p-3'>
                 {post.title}
             </h1>
