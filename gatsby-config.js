@@ -1,11 +1,14 @@
 require('dotenv').config()
+const siteUrl =
+    process.env.URL ||
+    process.env.DEPLOY_URL ||
+    `https://sneakersseur.netlify.com`
 module.exports = {
     siteMetadata: {
         title: `Sneakersseur | We bring you the latest in sneaker news, reviews and the upcoming releases.`,
         description: `Sneakersseur brings you all the latest sneaker news, reviews and release dates.`,
         author: `Ahmed Alhassan`,
-        siteUrl: `https://sneakersseur.netlify.com`,
-        image: `./src/images/sneakersseur-logo.png`,
+        siteUrl,
         siteLanguage: `en-CA`,
         siteLocale: `en-ca`,
         twitter: `@sneakersseur`,
