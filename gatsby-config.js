@@ -2,7 +2,7 @@ require('dotenv').config()
 const siteUrl =
     process.env.URL ||
     process.env.DEPLOY_URL ||
-    `https://sneakersseur.netlify.com`
+    `https://sneakersseur.netlify.com/`
 module.exports = {
     siteMetadata: {
         title: `Sneakersseur | We bring you the latest in sneaker news, reviews and the upcoming releases.`,
