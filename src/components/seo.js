@@ -23,7 +23,7 @@ function SEO({ description, lang, meta, title, image }) {
                         siteUrl
                     }
                 }
-                image: file(absolutePath: { regex: "/images/" }) {
+                ogImage: file(absolutePath: { regex: "/images/sneakersseur-logo.png" }) {
                     childImageSharp {
                         fixed(width: 500) {
                             src
@@ -37,7 +37,7 @@ function SEO({ description, lang, meta, title, image }) {
     const metaDescription = description || site.siteMetadata.description
     const metaImage = image
         ? site.siteMetadata.siteUrl.concat(image)
-        : site.siteMetadata.siteUrl.concat(image)
+        : site.siteMetadata.siteUrl.concat(ogImage.childImageSharp.fixed.src)
 
     return (
         <Helmet
@@ -69,7 +69,7 @@ function SEO({ description, lang, meta, title, image }) {
                 },
                 {
                     name: `twitter:card`,
-                    content: `summary`
+                    content: `summary_large_image`
                 },
                 {
                     name: `twitter:creator`,

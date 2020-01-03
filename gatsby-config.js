@@ -11,8 +11,8 @@ module.exports = {
         siteUrl,
         siteLanguage: `en-CA`,
         siteLocale: `en-ca`,
-        twitter: `@sneakersseur`,
-        instagram: `@sneakersseur`
+        twitter: `sneakersseur`,
+        instagram: `sneakersseur`
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
