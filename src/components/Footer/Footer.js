@@ -35,7 +35,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <a
-                                href='#'
+                                href='https://facebook.com'
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='text-white hover:text-facebook text-lg mx-3'
@@ -45,7 +45,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <a
-                                href='#'
+                                href='https://youtube.com'
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='text-white hover:text-youtube text-lg mx-3'
