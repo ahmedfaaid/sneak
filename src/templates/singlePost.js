@@ -8,7 +8,7 @@ import './singlePost.css'
 
 const singlePost = ({ data }) => {
     const post = data.markdownRemark.frontmatter
-    const image = post.featuredImage.childImageSharp.fluid.src
+    const image = post.featuredImage.childImageSharp.resize.src
     return (
         <Layout>
             <SEO title={post.title} image={image} />
@@ -64,6 +64,8 @@ export const postQuery = graphql`
                     childImageSharp {
                         fluid(maxWidth: 800, maxHeight: 600) {
                             ...GatsbyImageSharpFluid
+                        }
+                        resize(width: 800) {
                             src
                         }
                     }
