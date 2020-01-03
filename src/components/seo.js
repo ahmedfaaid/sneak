@@ -23,7 +23,9 @@ function SEO({ description, lang, meta, title, image }) {
                         siteUrl
                     }
                 }
-                ogImage: file(absolutePath: { regex: "/images/sneakersseur-logo.png" }) {
+                ogImage: file(
+                    absolutePath: { regex: "/(/images/sneakersseur-logo.png)/" }
+                ) {
                     childImageSharp {
                         fixed(width: 500) {
                             src
