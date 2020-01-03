@@ -15,9 +15,9 @@ const News = ({ title, slug, fluid }) => {
             </Link>
             <div className='md:px-6 py-4'>
                 <Link to={slug}>
-                    <h3 className='font-heading text-lg subpixel-antialiased mb-2'>
+                    <h1 className='font-heading text-lg subpixel-antialiased mb-2'>
                         {title}
-                    </h3>
+                    </h1>
                 </Link>
             </div>
             <Link
