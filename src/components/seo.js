@@ -24,7 +24,7 @@ function SEO({ description, lang, meta, title, image }) {
                     }
                 }
                 ogImage: file(
-                    absolutePath: { regex: "/(/images/sneakersseur-logo.png)/" }
+                    absolutePath: { regex: "/images/sneakersseur-logo/" }
                 ) {
                     childImageSharp {
                         fixed(width: 500) {
@@ -35,6 +35,9 @@ function SEO({ description, lang, meta, title, image }) {
             }
         `
     )
+
+    // ogImageDefault: file(absolutePath: { regex: "/assets/og-image/" }) {
+
 
     const metaDescription = description || site.siteMetadata.description
     const metaImage = image
