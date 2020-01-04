@@ -19,7 +19,7 @@ With a reputation for being a confident, dynamic and explosive athlete, Russell 
 
 &nbsp;
 
-The **The Why Not? Zer0.3** comes in three colorways all with separate release dates. The Zer0 Noise(January 2), Heartbeat(January 9) and The Family(February 27) would be available at <a href="jordan.com" target="_blank">jordan.com</a> and select retailers. It also launches with an apparel collection which will be available at <a href="jordan.com" target="_blank">jordan.com</a> and Footlocker House of Hoops.
+The **The Why Not? Zer0.3** comes in three colorways all with separate release dates. The Zer0 Noise(January 2), Heartbeat(January 9) and The Family(February 27) would be available at <a href="http://jordan.com" target="_blank">jordan.com</a> and select retailers. It also launches with an apparel collection which will be available at <a href="http://jordan.com" target="_blank">jordan.com</a> and Footlocker House of Hoops.
 
 &nbsp;
 
