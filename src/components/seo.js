@@ -39,7 +39,7 @@ function SEO({ description, lang, meta, title, image }) {
     // ogImageDefault: file(absolutePath: { regex: "/assets/og-image/" }) {
 
     const ogTitle = title
-        ? `${title} ${site.siteMetadata.title}`
+        ? `${title} - ${site.siteMetadata.title}`
         : site.siteMetadata.title
     const metaDescription = description || site.siteMetadata.description
     const metaImage =
