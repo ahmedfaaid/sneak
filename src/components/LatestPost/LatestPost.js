@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
 
-import News from '../News/News'
+import Post from '../Post/Post'
 
-const LatestNews = () => (
+const LatestPost = () => (
     <StaticQuery
-        query={latestNewsQuery}
+        query={latestPostQuery}
         render={data => {
             const hasNews =
                 data.allMarkdownRemark.edges &&
@@ -22,7 +22,7 @@ const LatestNews = () => (
                                     ({ node }) => (
                                         <>
                                             {node.frontmatter.publish ? (
-                                                <News
+                                                <Post
                                                     key={node.id}
                                                     title={
                                                         node.frontmatter.title
@@ -56,10 +56,12 @@ const LatestNews = () => (
     />
 )
 
-export const latestNewsQuery = graphql`
+export const latestPostQuery = graphql`
     query {
         allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "/(news)/.*\\\\.md$/" } }
+            filter: {
+                fileAbsolutePath: { regex: "/(news|reviews)/.*\\\\.md$/" }
+            }
             sort: { fields: [frontmatter___date], order: DESC }
             limit: 3
         ) {
@@ -86,4 +88,4 @@ export const latestNewsQuery = graphql`
     }
 `
 
-export default LatestNews
+export default LatestPost

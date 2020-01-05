@@ -4,7 +4,7 @@ import SEO from '../components/seo'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import News from '../components/News/News'
+import Post from '../components/Post/Post'
 
 const NewsPage = ({ data }) => {
     const hasNews = data.allMarkdownRemark.edges
@@ -28,7 +28,7 @@ const NewsPage = ({ data }) => {
                         {data.allMarkdownRemark.edges.map(({ node }) => (
                             <>
                                 {node.frontmatter.publish ? (
-                                    <News
+                                    <Post
                                         key={node.id}
                                         title={node.frontmatter.title}
                                         slug={node.fields.slug}

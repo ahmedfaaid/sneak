@@ -15,7 +15,11 @@ exports.onCreateNode = ({ node, actions }) => {
 
 exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions
-    const singlePost = path.resolve('src/templates/singlePost.js')
+
+    const templates = {
+        singlePost: path.resolve('src/templates/singlePost.js'),
+        tagPosts: path.resolve('src/templates/tagPosts.js')
+    }
 
     return graphql(`
         {
@@ -45,6 +49,24 @@ exports.createPages = ({ actions, graphql }) => {
                 context: {
                     // passing slug for template to get post
                     slug: node.fields.slug
+                }
+            })
+        })
+
+        // create single tag page
+        let tags = []
+        _.each(posts, edge => {
+            if(_.get(edge, 'node.frontmatter.tags')) {
+                tags = tags.concat(edge.node.frontmatter.tags)
+            }
+        })
+
+        tags.forEach(tag => {
+            createPage({
+                path: `/tag/${slugify(tag)}`,
+                component: templates.tagPosts,
+                context: {
+                    tag
                 }
             })
         })

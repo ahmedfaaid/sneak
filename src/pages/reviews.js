@@ -4,13 +4,16 @@ import SEO from '../components/seo'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import Review from '../components/Reviews/Review'
+import Post from '../components/Post/Post'
 
 const ReviewsPage = ({ data }) => {
     const hasReviews = data.allMarkdownRemark.edges
     return (
         <Layout>
-            <SEO title='Reviews' description='Find out what we think about the latest sneakers. From Jordans to Yeezys we have an opinion.' />
+            <SEO
+                title='Reviews'
+                description='Find out what we think about the latest sneakers. From Jordans to Yeezys we have an opinion.'
+            />
             <div className='my-3'>
                 <h1 className='font-heading text-xl text-center md:text-left subpixel-antialiased font-bold tracking-wide mb-3 p-3'>
                     Sneaker Reviews
@@ -25,7 +28,7 @@ const ReviewsPage = ({ data }) => {
                         {data.allMarkdownRemark.edges.map(({ node }) => (
                             <>
                                 {node.frontmatter.publish ? (
-                                    <Review
+                                    <Post
                                         key={node.id}
                                         title={node.frontmatter.title}
                                         slug={node.fields.slug}

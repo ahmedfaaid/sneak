@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
-import './News.css'
+import './Post.css'
 
-const News = ({ title, slug, fluid }) => {
+const Post = ({ title, slug, fluid }) => {
     return (
         <div className='lg:max-w-xs xl:max-w-sm overflow-hidden w-full md:w-2/5 lg:w-64 xl:w-2/4 md:mx-3 mb-3 shadow-md md:shadow-none'>
             <Link to={slug}>
@@ -30,10 +30,10 @@ const News = ({ title, slug, fluid }) => {
     )
 }
 
-News.propTypes = {
+Post.propTypes = {
     title: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     fluid: PropTypes.object.isRequired
 }
 
-export default News
+export default Post
