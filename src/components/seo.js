@@ -38,7 +38,9 @@ function SEO({ description, lang, meta, title, image }) {
 
     // ogImageDefault: file(absolutePath: { regex: "/assets/og-image/" }) {
 
-    const ogTitle = title ? `${title} ${site.siteMetadata.title}` : site.siteMetadata.title    
+    const ogTitle = title
+        ? `${title} ${site.siteMetadata.title}`
+        : site.siteMetadata.title
     const metaDescription = description || site.siteMetadata.description
     const metaImage =
         site.siteMetadata.siteUrl.concat(image) ||
@@ -79,7 +81,7 @@ function SEO({ description, lang, meta, title, image }) {
                     content: `summary`
                 },
                 {
-                    name: `twitter:creator`,
+                    name: `twitter:site`,
                     content: site.siteMetadata.twitter
                 },
                 {
@@ -91,12 +93,12 @@ function SEO({ description, lang, meta, title, image }) {
                     content: metaDescription
                 },
                 {
-                    name: `twitter:image`,
-                    content: metaImage
+                    name: `twitter:creator`,
+                    content: site.siteMetadata.twitter
                 },
                 {
-                    name: `twitter:site`,
-                    content: site.siteMetadata.twitter
+                    name: `twitter:image:src`,
+                    content: metaImage
                 }
             ].concat(meta)}
         />
