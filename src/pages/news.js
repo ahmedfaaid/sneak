@@ -54,7 +54,10 @@ const NewsPage = ({ data }) => {
 export const newsQuery = graphql`
     query {
         allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "/(news)/.*\\\\.md$/" } }
+            filter: {
+                fileAbsolutePath: { regex: "/(news)/.*\\\\.md$/" }
+                publish: { eq: true }
+            }
             sort: { fields: [frontmatter___date], order: DESC }
             limit: 3
         ) {
