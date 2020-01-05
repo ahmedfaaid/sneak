@@ -24,7 +24,7 @@ function SEO({ description, lang, meta, title, image }) {
                     }
                 }
                 ogImage: file(
-                    absolutePath: { regex: "/images/sneakersseur-logo/" }
+                    absolutePath: { regex: "/(/images/sneakersseur-logo).png/" }
                 ) {
                     childImageSharp {
                         fixed(width: 500) {
@@ -43,7 +43,7 @@ function SEO({ description, lang, meta, title, image }) {
         : site.siteMetadata.title
     const metaDescription = description || site.siteMetadata.description
     const metaImage =
-        site.siteMetadata.siteUrl.concat(image) ||
+        image ? site.siteMetadata.siteUrl.concat(image) :
         site.siteMetadata.siteUrl.concat(ogImage.childImageSharp.fixed.src)
 
     console.log(metaImage)
