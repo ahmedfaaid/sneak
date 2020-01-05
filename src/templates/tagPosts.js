@@ -1,33 +1,35 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import { graphql } from 'gatsby'
+import Post from '../components/Post/Post'
 
 const singleTag = ({ data, pageContext }) => {
+    const { tag } = pageContext
+    const { totalCount } = data.allMarkdownRemark
+    const pageHeader = `${totalCount} post${totalCount === 1 ? '' : 's'}`
     return (
         <Layout>
             <SEO />
-            <div className='lg:max-w-xs xl:max-w-sm overflow-hidden w-full md:w-2/5 lg:w-64 xl:w-2/4 md:mx-3 mb-3 shadow-md md:shadow-none'>
-                <Link to={slug}>
-                    <Img
-                        className='w-full md:w-10/12 mx-auto image-height'
-                        fluid={fluid}
+            <h1 className='font-heading text-3xl text-center subpixel-antialiased font-bold tracking-wide my-3 p-3'>
+                {tag}
+            </h1>
+            <hr />
+            <div className='block md:flex mb-4 justify-between flex-wrap mt-10'>
+                {data.allMarkdownRemark.edges.map(({ node }) => (
+                    <Post
+                        key={node.id}
+                        slug={node.fields.slug}
+                        title={node.frontmatter.title}
+                        fluid={
+                            node.frontmatter.featuredImage.childImageSharp.fluid
+                        }
                     />
-                </Link>
-                <div className='md:px-6 py-4'>
-                    <Link to={slug}>
-                        <h1 className='font-heading text-lg subpixel-antialiased mb-2'>
-                            {title}
-                        </h1>
-                    </Link>
-                </div>
-                <Link
-                    className='text-primary hover:text-secondary hover:underline md:ml-6'
-                    to={slug}
-                >
-                    Read more <span>&rarr;</span>
-                </Link>
+                ))}
             </div>
+            <p className='font-body text-md text-gray-700 text-center mb-10'>
+                {`${tag} has ${pageHeader}`}
+            </p>
         </Layout>
     )
 }
