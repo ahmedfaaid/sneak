@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, StaticQuery, Link } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 
 import Post from '../Post/Post'
 
@@ -40,7 +40,7 @@ export const latestPostQuery = graphql`
         allMarkdownRemark(
             filter: {
                 fileAbsolutePath: { regex: "/(news|reviews)/.*\\\\.md$/" }
-                publish: { eq: true }
+                frontmatter: { publish: { eq: true } }
             }
             sort: { fields: [frontmatter___date], order: DESC }
             limit: 3

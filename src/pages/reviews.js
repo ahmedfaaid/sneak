@@ -56,7 +56,7 @@ export const reviewsQuery = graphql`
         allMarkdownRemark(
             filter: {
                 fileAbsolutePath: { regex: "/(reviews)/.*\\\\.md$/" }
-                publish: { eq: true }
+                frontmatter: { publish: { eq: true } }
             }
             sort: { fields: [frontmatter___date], order: DESC }
             limit: 3
