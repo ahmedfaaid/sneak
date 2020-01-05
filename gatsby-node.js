@@ -1,5 +1,6 @@
 const { slugify } = require('./src/util/utilityFunctions')
 const path = require('path')
+const _ = require('lodash')
 
 exports.onCreateNode = ({ node, actions }) => {
     const { createNodeField } = actions
@@ -55,8 +56,8 @@ exports.createPages = ({ actions, graphql }) => {
 
         // create single tag page
         let tags = []
-        _.each(posts, edge => {
-            if(_.get(edge, 'node.frontmatter.tags')) {
+        _.each(post, edge => {
+            if (_.get(edge, 'node.frontmatter.tags')) {
                 tags = tags.concat(edge.node.frontmatter.tags)
             }
         })
