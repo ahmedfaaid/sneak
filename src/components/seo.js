@@ -36,12 +36,10 @@ function SEO({ description, lang, meta, title, image }) {
         `
     )
 
-    // ogImageDefault: file(absolutePath: { regex: "/assets/og-image/" }) {
-
     const ogTitle = title
         ? `${title} - ${site.siteMetadata.title}`
         : site.siteMetadata.title
-    const metaDescription = description || site.siteMetadata.description
+    const metaDescription = description ?  description : site.siteMetadata.description
     const metaImage =
         image ? site.siteMetadata.siteUrl.concat(image) :
         site.siteMetadata.siteUrl.concat(ogImage.childImageSharp.fixed.src)
@@ -77,8 +75,16 @@ function SEO({ description, lang, meta, title, image }) {
                     content: metaImage
                 },
                 {
+                    name: `twitter:image`,
+                    content: metaImage
+                },
+                {
+                    name: `twitter:image:alt`,
+                    content: ogTitle
+                },
+                {
                     name: `twitter:card`,
-                    content: `summary`
+                    content: `summary_large_image`
                 },
                 {
                     name: `twitter:site`,
@@ -91,14 +97,6 @@ function SEO({ description, lang, meta, title, image }) {
                 {
                     name: `twitter:description`,
                     content: metaDescription
-                },
-                {
-                    name: `twitter:creator`,
-                    content: site.siteMetadata.twitter
-                },
-                {
-                    name: `twitter:image:src`,
-                    content: metaImage
                 }
             ].concat(meta)}
         />
