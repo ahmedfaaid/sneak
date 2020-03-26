@@ -59,7 +59,6 @@ export const newsQuery = graphql`
                 frontmatter: { publish: { eq: true } }
             }
             sort: { fields: [frontmatter___date], order: DESC }
-            limit: 3
         ) {
             edges {
                 node {
