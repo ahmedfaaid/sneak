@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { DateTime } from 'luxon'
 
-const useReleases = limit => {
+const useReleases = page => {
   const [releases, setReleases] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
@@ -13,7 +13,7 @@ const useReleases = limit => {
       setLoading(true)
       try {
         const data = await fetch(
-          `${process.env.GATSBY_SNEAKER_DB_API}/v1/sneakers?limit=${limit}&releaseDate=gte:${now}&sort=releaseDate:asc`
+          `${process.env.GATSBY_SNEAKER_DB_API}/v1/sneakers?limit=10&releaseDate=gte:${now}&sort=releaseDate:asc&page=${page}`
         )
         const releaseData = await data.json()
 
@@ -27,7 +27,7 @@ const useReleases = limit => {
     }
 
     fetchReleases()
-  }, [limit, now])
+  }, [page, now])
 
   return {
     releases,

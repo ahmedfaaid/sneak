@@ -4,17 +4,26 @@ import SEO from '../components/seo'
 import Spinner from '../components/Spinner/Spinner'
 import Release from '../components/Release/Release'
 import useReleases from '../util/useReleases'
+import Right from '../images/svg/chevron_right-24px.svg'
+import Left from '../images/svg/chevron_left-24px.svg'
 
 const Releases = () => {
-  const [limit, setLimit] = useState(90)
+  const [page, setPage] = useState(1)
 
-  const { releases, loading, error } = useReleases(limit)
+  const { releases, loading, error } = useReleases(page)
 
-  const moreReleases = () => {
-    if (limit === 100) {
+  const nextPage = () => {
+    if (page === 5) {
       return
     }
-    setLimit(prev => prev + 10)
+    setPage(prev => prev + 1)
+  }
+
+  const prevPage = () => {
+    if (page === 1) {
+      return
+    }
+    setPage(prev => prev - 1)
   }
 
   if (loading) {
@@ -83,16 +92,27 @@ const Releases = () => {
             <Release key={release.id} releaseData={release} />
           ))}
         </div>
-        <div className='text-center'>
+        <div className='flex justify-center items-center'>
           <button
-            className={`py-2 px-8 text-white text-lg rounded-lg w-1/3 bg-secondary ${
-              limit === 100
-                ? 'cursor-not-allowed opacity-50'
-                : 'hover:bg-primary'
+            className={`p-2 border border-primary rounded-lg mr-4 ${
+              page === 1
+                ? 'opacity-50 cursor-not-allowed'
+                : 'hover:bg-primary hover:text-white'
             }`}
-            onClick={moreReleases}
+            onClick={prevPage}
           >
-            More
+            <Left className='fill-current' />
+          </button>
+          <span className='text-lg font-secondary'>{page}</span>
+          <button
+            className={`p-2 border border-primary rounded-lg ml-4 ${
+              page === 5
+                ? 'opacity-50 cursor-not-allowed'
+                : 'hover:bg-primary hover:text-white'
+            }`}
+            onClick={nextPage}
+          >
+            <Right className='fill-current' />
           </button>
         </div>
       </div>
