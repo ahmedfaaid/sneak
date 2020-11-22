@@ -37,12 +37,12 @@ module.exports = {
         path: `${__dirname}/src/pages/news`
       }
     },
-    {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: `sneakersseur`
-      }
-    },
+    // {
+    //   resolve: `gatsby-source-instagram`,
+    //   options: {
+    //     username: `sneakersseur`
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-mailchimp`,
       options: {
