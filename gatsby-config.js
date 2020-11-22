@@ -40,7 +40,7 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `sneakersseur`
+        username: `26066774695`
       }
     },
     {
@@ -72,9 +72,9 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /svg/,
-        },
-      },
+          include: /svg/
+        }
+      }
     }
   ]
 }
