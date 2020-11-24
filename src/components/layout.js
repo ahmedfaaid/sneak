@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
       </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className='container md:flex push-footer'>
-        <main className='w-full md:w-4/5 mx-auto'>{children}</main>
+        <main className='w-full mx-auto'>{children}</main>
         {/* <Sidebar /> */}
       </div>
       <Footer />

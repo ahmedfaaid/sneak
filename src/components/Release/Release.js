@@ -20,9 +20,9 @@ const Release = ({ releaseData }) => {
     'https://stockx-assets.imgix.net/media/New-Product-Placeholder-Default.jpg?fit=fill&bg=FFFFFF&w=140&h=100&auto=format,compress&trim=color&q=90&dpr=2&updated_at=0'
 
   return (
-    <div className='lg:max-w-xs xl:max-w-sm overflow-hidden w-full md:w-2/5 lg:w-64 xl:w-2/4 md:mx-3 mb-3 shadow-md md:shadow-none px-2 md:px-0'>
+    <div className='lg:max-w-xs xl:max-w-sm overflow-hidden w-full md:w-2/5 lg:w-64 xl:w-1/4 md:mx-3 mb-3 shadow-md md:shadow-none px-2 md:px-0'>
       <img
-        className='w-full md:w-10/12 mx-auto image-height object-cover'
+        className='w-full md:w-10/12 mx-auto image-height object-contain'
         src={!thumbUrl || thumbUrl === placeholder ? logo : thumbUrl}
         alt={title}
       />

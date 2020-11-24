@@ -1,72 +1,77 @@
+h3 {
+  @apply text-secondary;
+  @apply font-semibold;
+}
+
 .news-link a {
-    text-decoration: none;
-    color: #59a5d8;
+  text-decoration: none;
+  color: #59a5d8;
 }
 
 .news-link a:hover {
-    color: #133c55;
-    text-decoration: underline;
+  color: #133c55;
+  text-decoration: underline;
 }
 
 /* Find original blockquote design at https://codepen.io/iPawan/pen/emrPKP */
 blockquote {
-    display: block;
-    background: #fff;
-    padding: 15px 20px 15px 45px;
-    margin: 0 0 20px;
-    position: relative;
+  display: block;
+  background: #fff;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
 
-    /*Font*/
-    font-family: Georgia, serif;
-    font-size: 18px;
-    line-height: 2;
-    color: #666;
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 2;
+  color: #666;
 
-    /*Box Shadow - (Optional)*/
-    -moz-box-shadow: 2px 2px 15px #ccc;
-    -webkit-box-shadow: 2px 2px 15px #ccc;
-    box-shadow: 2px 2px 15px #ccc;
+  /*Box Shadow - (Optional)*/
+  -moz-box-shadow: 2px 2px 15px #ccc;
+  -webkit-box-shadow: 2px 2px 15px #ccc;
+  box-shadow: 2px 2px 15px #ccc;
 
-    /*Borders - (Optional)*/
-    border-left-style: solid;
-    border-left-width: 15px;
-    border-right-style: solid;
-    border-right-width: 2px;
-    border-left-color: #59a5d8;
-    border-right-color: #133c55;
+  /*Borders - (Optional)*/
+  border-left-style: solid;
+  border-left-width: 15px;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-left-color: #59a5d8;
+  border-right-color: #133c55;
 }
 
 blockquote::before {
-    content: '\201C'; /*Unicode for Left Double Quote*/
+  content: '\201C'; /*Unicode for Left Double Quote*/
 
-    /*Font*/
-    font-size: 60px;
-    font-weight: bold;
-    color: #999;
+  /*Font*/
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
 
-    /*Positioning*/
-    position: absolute;
-    left: 10px;
-    top: 5px;
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top: 5px;
 }
 
 blockquote::after {
-    /*Reset to make sure*/
-    content: '';
+  /*Reset to make sure*/
+  content: '';
 }
 
 blockquote a {
-    text-decoration: none;
-    background: #eee;
-    cursor: pointer;
-    padding: 0 3px;
-    color: #59a5d8;
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #59a5d8;
 }
 
 blockquote a:hover {
-    color: #133c55;
+  color: #133c55;
 }
 
 blockquote em {
-    font-style: italic;
+  font-style: italic;
 }
