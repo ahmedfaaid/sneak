@@ -11,7 +11,7 @@ tags:
 publish: true
 ---
 
-Its been a while but we are back and with a **New Feature**. We now have a release calendar. You can check out upcoming sneaker releases as well as other information like price, colorways etc. [You can check it out here](https://sneakersseur.netlify.app/releases) or click the 'Releases' option in the navigation bar.
+Its been a while but we are back and with a **New Feature**. We now have a release calendar. You can check out upcoming sneaker releases as well as other information like price, colorways etc. [You can check it out here](/releases) or click the 'Releases' option in the navigation bar.
 
 &nbsp;
 
