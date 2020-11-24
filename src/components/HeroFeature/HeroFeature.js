@@ -39,7 +39,7 @@ const HeroFeature = () => (
                         fluid={
                           node.frontmatter.featuredImage.childImageSharp.fluid
                         }
-                        className='object-contain'
+                        className='object-contain object-center'
                       />
                       <h3
                         className='hero-text font-heading font-bold text-xl lg:text-2xl text-center subpixel-antialiased mb-2 text-white tracking-wide border-b-2 border-transparent hover:border-primary'
