@@ -2,7 +2,7 @@
 title: 'Release Calendar Feature'
 date: 2020-11-22 10:00
 author: 'Ahmed Faaid'
-featuredImage: ../../images/release-calendar/release-calendar.png
+featuredImage: ../../images/release-calendar/adam-tinworth-OJWivczp3aY-unsplash.jpg
 feature: true
 tags:
   - Feature
