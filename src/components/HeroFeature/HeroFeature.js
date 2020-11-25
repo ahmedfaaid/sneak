@@ -32,7 +32,7 @@ const HeroFeature = () => (
                       className='relative border-b-8 border-light'
                     >
                       <div
-                        className='absolute top-0 left-0 bg-transparent w-full h-full'
+                        className='absolute top-0 left-0 bg-black w-full h-full opacity-25'
                         style={{ zIndex: 1 }}
                       />
                       <Img
