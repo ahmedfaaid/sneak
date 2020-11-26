@@ -9,9 +9,10 @@ import './singlePost.css'
 const singlePost = ({ data }) => {
   const post = data.markdownRemark.frontmatter
   const image = post.featuredImage.childImageSharp.resize.src
+  const author = post.author
   return (
     <Layout>
-      <SEO title={post.title} image={image} />
+      <SEO title={post.title} image={image} author={author} post />
       <h1 className='font-heading text-3xl text-center subpixel-antialiased font-bold tracking-wide my-3 p-3'>
         {post.title}
       </h1>

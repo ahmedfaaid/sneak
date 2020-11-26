@@ -19,7 +19,7 @@ const useReleases = page => {
 
         setReleases(releaseData)
       } catch (error) {
-        throw new Error('There was an error fetching the sneaker releases')
+        console.log('There was an error fetching releases')
         setError(error)
       }
 

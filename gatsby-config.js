@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: `Sneakersseur | We bring you the latest in sneaker news, reviews and the upcoming releases.`,
     description: `Sneakersseur brings you all the latest sneaker news, reviews and release dates.`,
-    author: `Ahmed Alhassan`,
+    author: `sneakersseur`,
     siteUrl,
     siteLanguage: `en-CA`,
     siteLocale: `en-ca`,
@@ -61,12 +61,8 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`
-        // icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
       }
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
     `gatsby-plugin-postcss`,
     {
       resolve: 'gatsby-plugin-react-svg',
