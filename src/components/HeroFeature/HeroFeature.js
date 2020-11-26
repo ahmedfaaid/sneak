@@ -10,7 +10,6 @@ const HeroFeature = () => (
     query={heroFeatureQuery}
     render={data => {
       const heroImage = data.allMarkdownRemark.edges
-      console.log(heroImage)
 
       return (
         <div className='w-full mx-auto mt-6'>
