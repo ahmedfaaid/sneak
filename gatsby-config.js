@@ -1,8 +1,8 @@
 require('dotenv').config()
 const siteUrl =
-  process.env.URL ||
-  process.env.DEPLOY_URL ||
-  `https://sneakersseur.netlify.app/`
+  process.env.NODE_ENV === 'production'
+    ? `https://sneakersseur.netlify.app/`
+    : `http://localhost:8000/`
 module.exports = {
   siteMetadata: {
     title: `Sneakersseur | We bring you the latest in sneaker news, reviews and the upcoming releases.`,
