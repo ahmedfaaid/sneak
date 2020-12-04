@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "dotenv": "^8.2.0",
     "embla-carousel-react": "^1.2.7",
     "gatsby": "^2.26.0",
