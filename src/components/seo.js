@@ -52,7 +52,7 @@ function SEO({ description, lang, title, image, post, author }) {
       <meta name='description' content={seo.description} />
       <meta name='image' content={seo.image} />
 
-      <meta name='twitter:card' content='summary' />
+      <meta name='twitter:card' content='summary_large_image' />
 
       {twitter && <meta name='twitter:creator' content={twitter} />}
 
