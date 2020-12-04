@@ -1,19 +1,21 @@
+/* purgecss start ignore */
 @tailwind base;
+/* purgecss end ignore */
 
 @tailwind components;
 
 hr {
-    width: 60%;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-    height: 1px;
-    background-color: #a0aec0;
-    opacity: 0.5;
+  width: 60%;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  background-color: #a0aec0;
+  opacity: 0.5;
 }
 
 .push-footer {
-    min-height: calc(100vh - 153px);
+  min-height: calc(100vh - 153px);
 }
 
 @tailwind utilities;
