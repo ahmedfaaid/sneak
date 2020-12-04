@@ -64,6 +64,13 @@ module.exports = {
       }
     },
     `gatsby-plugin-postcss`,
+    process.env.NODE_ENV === 'production' && {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+        ignore: ['react-responsive-carousel']
+      }
+    },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
